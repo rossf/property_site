@@ -1,0 +1,6 @@
+CreateTable
+190
+{"TableName":"dynamoid__test_properties","KeySchema":{"HashKeyElement":{"AttributeName":"id","AttributeType":"S"}},"ProvisionedThroughput":{"ReadCapacityUnits":100,"WriteCapacityUnits":20}}
+PutItem
+281
+{"TableName":"dynamoid__test_properties","Item":{"created_at":{"N":"1421491186.1211798"},"updated_at":{"N":"1421491186.121321"},"id":{"S":"c0d3865e-f317-45a9-a022-dd7b97a8ad2a"},"title_en":{"S":"test"},"description_en":{"S":"test_description"}},"Expected":{"id":{"Exists":false}}}

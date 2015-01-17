@@ -25,8 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # lets try out DynamoDB
 gem 'dynamoid'
-gem 'fake_dynamo'
+gem 'fake_dynamo', '~> 0.1.3'
 gem 'dynamoid-paperclip'
+gem 'aws-sdk'
 
 # bootstrap for layout
 gem 'bootstrap-sass'

@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.featured
+    @properties = Property.all
   end
 end
