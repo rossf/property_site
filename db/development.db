@@ -1,9 +1,0 @@
-CreateTable
-196
-{"TableName":"dynamoid__development_users","KeySchema":{"HashKeyElement":{"AttributeName":"email","AttributeType":"S"}},"ProvisionedThroughput":{"ReadCapacityUnits":400,"WriteCapacityUnits":400}}
-PutItem
-296
-{"TableName":"dynamoid__development_users","Item":{"created_at":{"N":"1421573341.901755"},"updated_at":{"N":"1421573341.9019096"},"email":{"S":"rossfinch@gmail.com"},"encrypted_password":{"S":"$2a$10$E2DbG.EU4vrC531ixpAq4uUZkmNWqNMiFW2t74RPuVLmeBVAqibES"}},"Expected":{"email":{"Exists":false}}}
-PutItem
-452
-{"TableName":"dynamoid__development_users","Item":{"created_at":{"N":"1421573341.901755"},"updated_at":{"N":"1421573342.0170476"},"email":{"S":"rossfinch@gmail.com"},"encrypted_password":{"S":"$2a$10$E2DbG.EU4vrC531ixpAq4uUZkmNWqNMiFW2t74RPuVLmeBVAqibES"},"sign_in_count":{"N":"1"},"current_sign_in_at":{"N":"1421573342.0166008"},"last_sign_in_at":{"N":"1421573342.0166008"},"current_sign_in_ip":{"S":"127.0.0.1"},"last_sign_in_ip":{"S":"127.0.0.1"}}}
