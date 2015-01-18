@@ -3,8 +3,7 @@ source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -28,9 +27,22 @@ gem 'dynamoid'
 gem 'dynamoid-paperclip'
 gem 'aws-sdk'
 
+# Authentication
+gem 'dynamoid-devise'
+gem 'orm_adapter-dynamoid' #unspecified dependency
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-gplus'
+gem 'omniauth-twitter'
+gem 'omniauth-pinterest'
+gem 'omniauth-yahoo'
+gem 'omniauth-weibo-oauth2'
+
+
 # bootstrap for layout
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass-extras'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -24,12 +24,12 @@ class Property
   include Sunspot::Dynamoid
   searchable do
     text :title_en, :title_vi, :description_en, :description_vi
-    time :last_update_date
+    time :updated_at
     integer :price, :bedrooms, :bathrooms
     boolean :swimming_pool, :air_conditionings
   end
   
-  def featured
+  def self.featured
     return Property.all
   end
 end
