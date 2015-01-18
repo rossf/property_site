@@ -25,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # lets try out DynamoDB
 gem 'dynamoid'
-gem 'fake_dynamo', '~> 0.1.3'
 gem 'dynamoid-paperclip'
 gem 'aws-sdk'
 
@@ -42,6 +41,10 @@ gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#search
+gem 'sunspot_rails'
+gem 'sunspot_dynamoid', github: 'kjaikeerthi/sunspot-dynamoid'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -51,5 +54,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  gem 'fake_dynamo', '~> 0.1.3'
+  gem 'sunspot_solr' 
 end
 

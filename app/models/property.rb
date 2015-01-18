@@ -9,6 +9,7 @@ class Property
   field :bedrooms, :integer
   field :bathrooms, :integer
   field :agreement_type, :set => ['rental', 'sale']
+  field :type, :set => ['condominium', 'apartment', 'house', 'share']
   field :swiming_pool, :boolean
   field :air_conditioning, :boolean
   
@@ -19,6 +20,14 @@ class Property
   validates :description_en, presence: true, if: "description_vi.nil?"
   validates :description_vi, presence: true, if: "description_en.nil?"
   validates_numericality_of :price, :bedrooms, :bathrooms, numericality: { greater_than: 0 }, allow_nil: true
+  
+  include Sunspot::Dynamoid
+  searchable do
+    text :title_en, :title_vi, :description_en, :description_vi
+    time :last_update_date
+    integer :price, :bedrooms, :bathrooms
+    boolean :swimming_pool, :air_conditionings
+  end
   
   def featured
     return Property.all
