@@ -1,7 +1,7 @@
 class User
   include Dynamoid::Document
   
-  table :name => :users, :key => :email, :read_capacity => 400, :write_capacity => 400
+  table :name => :users, :read_capacity => 400, :write_capacity => 400
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -21,8 +21,11 @@ class User
   field :last_sign_in_at, :datetime
   field :current_sign_in_ip
   field :last_sign_in_ip
+  field :remember_created_at, :datetime
   
-  validates :email, presence: true
+  index :email
+  
+  validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
   
   def self.find_for_facebook_oauth(auth)

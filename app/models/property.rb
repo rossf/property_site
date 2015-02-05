@@ -30,6 +30,10 @@ class Property
   end
   
   def self.featured
-    return Property.all
+    begin 
+      return Property.all
+    rescue
+      return nil
+    end
   end
 end
